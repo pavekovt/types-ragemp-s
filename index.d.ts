@@ -406,6 +406,7 @@ interface EventMpPool {
 	delayInitialization: boolean
 
 	add(eventName: RageEnums.EventKey | string, callback: (...args: any[]) => void): void;
+	addProc(procName: string, callback: (...args: any[]) => any): void;
 	add(events: ({ [name: string]: (...args: any[]) => void; })): void;
 	addCommand(commandName: string, callback: (player: PlayerMp, fullText: string, ...args: string[]) => void): void;
 	addCommand(commands: { [commandName: string]: (player: PlayerMp, fullText: string, ...args: string[]) => void; }): void;
