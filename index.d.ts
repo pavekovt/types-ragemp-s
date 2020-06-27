@@ -149,6 +149,9 @@ interface PlayerMp extends EntityMp {
 
 	ban(reason: string): void;
 	call(eventName: string, args?: any[]): void;
+	callProc(procName: string, args?: any[]): Promise<any>;
+	cancelPendingRpc(procName: string): void;
+	hasPendingRpc(procName: string): boolean;
 	clearDecorations(): void;
 	disableVoiceTo(targetPlayer: PlayerMp): void;
 	enableVoiceTo(targetPlayer: PlayerMp): void;
